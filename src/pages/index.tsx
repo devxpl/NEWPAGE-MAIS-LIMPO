@@ -1,7 +1,9 @@
+import { Main } from '@/templates/Main';
+
 const Index = () => {
   return (
     <>
-      <h1> oi</h1>
+      <Main meta={<h1> oi</h1>} />
     </>
   );
 };
