@@ -5,7 +5,7 @@ export const Header = (): JSX.Element => {
     <>
       <nav>
         <Link href="/">Inicio</Link>
-        <Link href="/orçamentos">Orçamento</Link>
+        <Link href="/orcamento">Orçamento</Link>
         <Link href="/empresa">Empresa</Link>
         <Link href="/servicos">Serviços</Link>
         <Link href="/contato">Contato</Link>
