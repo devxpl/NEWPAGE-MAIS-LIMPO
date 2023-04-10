@@ -12,9 +12,8 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-
       <main>
-        <h1 className="text-violet-900 text-4xl">Main Page</h1>
+        <h1 className="text-violet-900 text-4xl">CONTEUDO MAIN PAGE</h1>
       </main>
     </>
   );

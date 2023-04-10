@@ -1,7 +1,7 @@
 const orcamento = () => {
   return (
     <>
-      <h1>Orçamento</h1>;
+      <h1 className="text-violet-900 text-4xl">CONTEUDO ORÇAMENTO</h1>
     </>
   );
 };
