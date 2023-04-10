@@ -1,11 +1,23 @@
-import { Main } from '@/templates/Main';
+import { type NextPage } from 'next';
+import Head from 'next/head';
 
-const Index = () => {
+const Home: NextPage = () => {
   return (
     <>
-      <Main meta={<h1> oi</h1>} />
+      <Head>
+        <title>Mais Limpo</title>
+        <meta
+            name="description"
+          content="Limpeza e higienização de estofados"
+        />
+        <link rel="icon" href="/favicon-32x32.png" />
+      </Head>
+
+      <main>
+        <h1 className="text-violet-900 text-4xl">oi</h1>
+      </main>
     </>
   );
 };
 
-export default Index;
+export default Home;
