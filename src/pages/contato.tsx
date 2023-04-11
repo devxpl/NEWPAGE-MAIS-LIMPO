@@ -1,7 +1,11 @@
 const contato = () => {
   return (
     <>
-      <h1 className="text-violet-900 text-4xl">CONTEUDO CONTATOS</h1>
+      <main className="flex justify-center h-screen">
+        <h1 className="text-violet-900 text-4xl flex justify-center m-auto">
+          CONTATOS
+        </h1>
+      </main>
     </>
   );
 };

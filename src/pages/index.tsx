@@ -1,19 +1,8 @@
-import { type NextPage } from 'next';
-import Head from 'next/head';
-
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
-      <Head>
-        <title>Mais Limpo</title>
-        <meta
-          name="description"
-          content="Limpeza e higienização de estofados"
-        />
-        <link rel="icon" href="/favicon-32x32.png" />
-      </Head>
-      <main>
-        <h1 className="text-violet-900 text-4xl">CONTEUDO MAIN PAGE</h1>
+      <main className="flex justify-center h-screen ">
+        <h1 className="text-violet-900 text-4xl m-auto">MAIN PAGE</h1>
       </main>
     </>
   );
