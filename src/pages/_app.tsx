@@ -22,7 +22,6 @@ export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
         ]}
       />
       <main className="bg-gradient-to-br via-white from-green-300 to-blue-300">
-        <link rel="icon" href="public/favicon-32x32.png" />
         <HeaderPage />
         <Component {...pageProps} />
       </main>

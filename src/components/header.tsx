@@ -13,14 +13,14 @@ export const HeaderPage = () => {
   }
 
   return (
-    <div className="flex flex-wrap items-center justify-between py-4">
-      <div className="flex">
+    <section className="flex  items-center  py-4">
+      <div className="flex ml-auto pr-20 md:pr-0 xsm:pr-0">
         <button
           type="button"
           className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+          <svg viewBox="0 0 30 30" className="h-10 w-10 fill-current">
             {isOpen ? (
               <path
                 fillRule="evenodd"
@@ -40,39 +40,39 @@ export const HeaderPage = () => {
       <nav
         className={`${
           isOpen ? 'block' : 'hidden'
-        }  absolute inset-x-0 top-0 p-7 transition transform origin-top-right md-hidden`}
+        }  absolute inset-x-0 top-5 p-7 transition transform origin-top-right md-hidden flex flex-col justify-end items-end`}
       >
         <a
-          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-blue-300 w-28"
           onClick={() => void handleClick('/')}
         >
           Inicio
         </a>
         <a
-          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
           onClick={() => void handleClick('/orcamento')}
         >
           Orçamentos
         </a>
         <a
-          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
           onClick={() => void handleClick('/empresa')}
         >
           Empresa
         </a>
         <a
-          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
           onClick={() => void handleClick('/servicos')}
         >
           Serviços
         </a>
         <a
-          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
           onClick={() => void handleClick('/contato')}
         >
           Contato
         </a>
       </nav>
-    </div>
+    </section>
   );
 };
