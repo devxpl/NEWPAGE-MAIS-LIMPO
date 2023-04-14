@@ -13,7 +13,7 @@ export const HeaderPage = () => {
   }
 
   return (
-    <section className="flex  items-center  py-4">
+    <section className="flex  items-center  py-4 fixed top-0 left-0 w-full z-10">
       <div className="flex ml-auto pr-20 md:pr-0 xsm:pr-0">
         <button
           type="button"

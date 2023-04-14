@@ -16,6 +16,7 @@ export const Head = ({ title, meta }: HeadProps) => {
         {meta.map(({ name, content }, index) => (
           <meta key={index} name={name} content={content} />
         ))}
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </NextHead>
     </>
   );

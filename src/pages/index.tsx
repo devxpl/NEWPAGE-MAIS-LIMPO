@@ -1,8 +1,12 @@
+import { Slider } from '~/components/slider';
+
 const Home = () => {
   return (
     <>
       <section className="flex justify-center h-screen ">
-        <h1 className="text-violet-900 text-4xl m-auto">MAIN PAGE</h1>
+        <div className="bg-gray-200 h-200 fixed top-0 left-0 w-full">
+          <Slider />
+        </div>
       </section>
     </>
   );
