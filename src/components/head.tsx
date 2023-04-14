@@ -10,12 +10,13 @@ interface HeadProps {
 
 export const Head = ({ title, meta }: HeadProps) => {
   return (
-    <NextHead>
-      <title>{title}</title>
-      {meta.map(({ name, content }, index) => (
-        <meta key={index} name={name} content={content} />
-      ))}
-      <link rel="icon" href="/public/favicon-32x32.png" />
-    </NextHead>
+    <>
+      <NextHead>
+        <title>{title}</title>
+        {meta.map(({ name, content }, index) => (
+          <meta key={index} name={name} content={content} />
+        ))}
+      </NextHead>
+    </>
   );
 };

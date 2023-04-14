@@ -2,6 +2,7 @@ import 'src/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { HeaderPage } from '../components/header';
 import { Head } from '~/components/head';
+import { Footer } from '~/components/footer';
 
 export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
@@ -24,6 +25,7 @@ export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <main className="bg-gradient-to-br via-white from-green-300 to-blue-300">
         <HeaderPage />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   );
