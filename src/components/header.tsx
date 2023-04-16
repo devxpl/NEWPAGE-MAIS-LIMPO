@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import router from 'next/router';
 import { useState } from 'react';
 
@@ -13,14 +14,14 @@ export const HeaderPage = () => {
   }
 
   return (
-    <section className="flex  items-center  py-4 fixed top-0 left-0 w-full z-10">
-      <div className="flex ml-auto pr-20 md:pr-0 xsm:pr-0">
+    <section className="flex items-center fixed top-0 w-full z-10 bg-cyan-600">
+      <div className="flex pr-20 md:pr-0 xsm:pr-0">
         <button
           type="button"
-          className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+          className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 "
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg viewBox="0 0 30 30" className="h-10 w-10 fill-current">
+          <svg viewBox="0 0 30 30" className="h-20 w-20 fill-current">
             {isOpen ? (
               <path
                 fillRule="evenodd"
@@ -37,10 +38,19 @@ export const HeaderPage = () => {
           </svg>
         </button>
       </div>
+      <div className="flex justify-center w-20 mr-20">
+        <Image
+          className="rounded-full"
+          src="/assets/mas (1).png"
+          width={100}
+          height={50}
+          alt={'logo'}
+        />
+      </div>
       <nav
         className={`${
           isOpen ? 'block' : 'hidden'
-        }  absolute inset-x-0 top-5 p-7 transition transform origin-top-right md-hidden flex flex-col justify-end items-end`}
+        }  absolute  top-20 p-5 transition transform origin-top-right md-hidden flex flex-col justify-end items-end bg-cyan-600`}
       >
         <a
           className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-blue-300 w-28"
@@ -65,12 +75,6 @@ export const HeaderPage = () => {
           onClick={() => void handleClick('/servicos')}
         >
           Serviços
-        </a>
-        <a
-          className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
-          onClick={() => void handleClick('/contato')}
-        >
-          Contato
         </a>
       </nav>
     </section>

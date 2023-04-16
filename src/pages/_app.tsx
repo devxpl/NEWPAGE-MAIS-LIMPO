@@ -22,11 +22,11 @@ export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
           },
         ]}
       />
-      <main className="bg-gradient-to-br via-white from-green-300 to-blue-300">
+      <main className="">
         <HeaderPage />
         <Component {...pageProps} />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };
