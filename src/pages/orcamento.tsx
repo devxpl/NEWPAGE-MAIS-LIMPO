@@ -45,10 +45,10 @@ const ContactForm = () => {
     <>
       <section>
         <h1 className=" flex justify-center relative z-20 xsm:mt-36 desktop:mt-5 font-mono border-l-slate-950 text-2xl">
-          Faça Seu Orçamento!
+          Faça Agora Seu Orçamento!
         </h1>
       </section>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="">
         <div className="mb-4 mt-28  w-64 flex justify-center mx-auto">
           <label className="block text-gray-700 font-bold mb-2" htmlFor="nome">
             Nome:
@@ -75,7 +75,7 @@ const ContactForm = () => {
             required
           />
         </div>
-        <div className="mb-5 w-64 flex justify-center mx-auto">
+        <div className="mb-5 w-64 flex justify-center mx-auto ">
           <label
             className="block text-gray-700 font-bold mb-1"
             htmlFor="whatsapp"

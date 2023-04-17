@@ -72,9 +72,9 @@ export const HeaderPage = () => {
         </a>
         <a
           className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-300 w-28"
-          onClick={() => void handleClick('/servicos')}
+          onClick={() => void handleClick('/produtos')}
         >
-          Serviços
+          Produtos
         </a>
       </nav>
     </section>
