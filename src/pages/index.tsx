@@ -1,7 +1,13 @@
 const MainPage = () => {
+  const minivideo = [
+    {
+      descricao: 'oi',
+      video: '/assets/DIVULGA.mp4',
+    },
+  ];
   return (
     <>
-      <section className="flex h-screen w-screen">
+      <section className="flex h-screen w-screen desktop:h-1/2">
         <div className="mx-auto max-w-7xl mt-10 px-4 sm:px-6 lg:px-8 pt-10">
           <h1 className="text-4xl font-bold text-gray-900 mb-8 mt-10 flex justify-center">
             Bem-vindo!
@@ -14,16 +20,24 @@ const MainPage = () => {
             clientes. Conte conosco para deixar sua casa ou escritório
             impecáveis!
           </p>
-          <div className="flex justify-center mx-auto">
-            <video
-              className="rounded-md"
-              src="/assets/DIVULGA.mp4"
-              width="340"
-              height="360"
-              autoPlay
-              loop
-            />
+          <div className="grid desktop:grid-cols-1">
+            {minivideo.map((minivideo) => (
+              <div
+                key={minivideo.descricao}
+                className="border p-1 shadow flex justify-center"
+              >
+                <video
+                  src={minivideo.video}
+                  className="rounded-md"
+                  width={400}
+                  height={400}
+                  autoPlay
+                  loop
+                />
+              </div>
+            ))}
           </div>
+
           <div className="flex justify-center mt-5">
             <div className="bg-green-500 rounded-full py-2 px-4">
               <a

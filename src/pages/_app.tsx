@@ -25,8 +25,10 @@ export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <main className="">
         <HeaderPage />
         <Component {...pageProps} />
+        <div className="hidden desktop:block">
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </>
   );
 };
