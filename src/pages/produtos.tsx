@@ -3,70 +3,74 @@ const Produtos = () => {
   const products = [
     {
       id: 1,
-      name: 'Produto 1',
-      price: 10,
-      image: '/assets/1.png',
+      name: 'Nero Limpa Pisos 5l',
+      description:
+        'Este Produto é Especial, Limpa Seu Piso Encardido Com Facilidade.',
+      price: 150,
+      image: '/assets/limpa.png',
     },
     {
       id: 2,
-      name: 'Produto 2',
-      price: 20,
-      image: '/assets/2.png',
+      name: 'Nero Limpa Pedras 5l',
+      description:
+        'Limpa Pedra Encardida (Miracema, Portuguesa, São tomé) Com Facilidade. Você Alcançará Um Exelente Resultado!',
+      price: 150,
+      image: '/assets/limpa1.png',
     },
     {
       id: 3,
-      name: 'Produto 3',
-      price: 30,
-      image: '/assets/3.png',
+      name: 'Nero Limpa Pisos 1l',
+      description:
+        'Embalagem Economica Para Pequenos Reparos ou Testes de Eficacia do Produto',
+      price: 40,
+      image: '/assets/limpapiso1l.png',
     },
     {
       id: 4,
-      name: 'Produto 4',
+      name: 'Nero Limpa Pedras 1l',
+      description:
+        'Embalagem Economica Para Pequenos Reparos ou Testes de Eficacia do Produto',
       price: 40,
-      image: '/assets/4.png',
+      image: '/assets/limpa1l.png',
     },
     {
       id: 5,
-      name: 'Produto 5',
-      price: 50,
-      image: '/assets/5.png',
+      name: 'Nero Aromatizante',
+      description:
+        'Deixa Seu Ambiente Com o Cheiro Agradavél Durante Dias. Utilizar em Estofados',
+      price: 49.9,
+      image: '/assets/buque.png',
     },
     {
       id: 6,
-      name: 'Produto 6',
-      price: 60,
-      image: '/assets/6.png',
+      name: 'Nero Tira Manchas',
+      description:
+        'Está Com Aquela Manchinha Desagradável No Seu estofado? Esse Produto Resolve Seu Problema',
+      price: 59.9,
+      image: '/assets/mancha.png',
     },
     {
       id: 7,
-      name: 'Produto 7',
-      price: 70,
-      image: '/assets/7.png',
+      name: 'Mascara Respirador 1/4 Facial',
+      description:
+        'TAMANHO: Único Compõe 1 Mascara e 1 Cartucho ALLTEC CMC Filtro Químico, Vapores Orgânicos e Gases Ácidos',
+      price: 49.9,
+      image: '/assets/mascara.png',
     },
     {
       id: 8,
-      name: 'Produto 8',
-      price: 80,
-      image: '/assets/8.png',
-    },
-    {
-      id: 9,
-      name: 'Produto 9',
-      price: 90,
-      image: '/assets/9.png',
-    },
-    {
-      id: 10,
-      name: 'Produto 10',
-      price: 100,
-      image: '/assets/10.png',
+      name: 'Luva NeoLátex Com Reforço CA 5774',
+      description:
+        'Luva De Segurança Confeccionada em látex (Borracha Natural) e Policloropreno (Neoprene) Na Palma e Dorso.',
+      price: 24.8,
+      image: '/assets/luva.png',
     },
   ];
 
   return (
     <div className="grid desktop:grid-cols-4 xsm:grid-cols-1 laptop:grid-cols-2 gap-4 pt-20">
       {products.map((product) => (
-        <div key={product.id} className="border p-4 rounded-lg shadow">
+        <div key={product.id} className=" p-2 rounded-lg shadow">
           <img
             src={product.image}
             alt={product.name}
@@ -78,6 +82,9 @@ const Produtos = () => {
           <div className="flex justify-center">
             R$ {product.price.toFixed(2)}
           </div>
+          <p className="flex text-center" key={product.id}>
+            {product.description}
+          </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center mx-auto">
             <a
               className="flex justify-center mx-10"

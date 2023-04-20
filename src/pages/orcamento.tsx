@@ -9,36 +9,37 @@ const ContactForm = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const destinatario = 'afonsobachelli@gmail.com';
-    const assunto = 'Novo Cliente';
-    const mensagemFormatada = `Nome: ${nome}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nMensagem: ${mensagem}`;
+    const data = {
+      name: nome,
+      phone: whatsapp,
+      email: email,
+      message: mensagem,
+    };
 
-    fetch('/api/enviar-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        destinatario,
-        assunto,
-        mensagem: mensagemFormatada,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        alert('Mensagem enviada com sucesso!');
-        setNome('');
-        setEmail('');
-        setWhatsapp('');
-        setMensagem('');
+    if (typeof window !== 'undefined') {
+      fetch('http://localhost:3001/emails/emailSend', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       })
-      .catch((error) => {
-        console.error(error);
-        alert(
-          'Houve um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.',
-        );
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          alert('Mensagem enviada com sucesso!');
+          setNome('');
+          setEmail('');
+          setWhatsapp('');
+          setMensagem('');
+        })
+        .catch((error) => {
+          console.error(error);
+          alert(
+            'Houve um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.',
+          );
+        });
+    }
   };
 
   return (
@@ -91,25 +92,24 @@ const ContactForm = () => {
             required
           />
         </div>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="mensagem"
-              className="text-gray-700 text-sm font-bold mb-2 flex justify-center mx-auto"
-            >
-              Digite sua mensagem:
-            </label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows={3}
-              className="shadow appearance-none border rounded flex justify-center mx-auto w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-slate-300"
-              value={mensagem}
-              onChange={(event) => setMensagem(event.target.value)}
-              required
-            ></textarea>
-          </div>
-        </form>
+        <div className="mb-4">
+          <label
+            htmlFor="mensagem"
+            className="text-gray-700 text-sm font-bold mb-2 flex justify-center mx-auto"
+          >
+            Digite sua mensagem:
+          </label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows={3}
+            className="shadow appearance-none border rounded flex justify-center mx-auto w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-slate-300"
+            value={mensagem}
+            onChange={(event) => setMensagem(event.target.value)}
+            required
+          ></textarea>
+        </div>
+
         <div className="flex items-center justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

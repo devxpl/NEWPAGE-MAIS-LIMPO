@@ -22,12 +22,10 @@ export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
           },
         ]}
       />
-      <main className="">
+      <main className="content">
         <HeaderPage />
         <Component {...pageProps} />
-        <div className="hidden desktop:block">
-          <Footer />
-        </div>
+        <Footer />
       </main>
     </>
   );
