@@ -1,8 +1,8 @@
 import 'src/styles/globals.css';
 import type { AppProps } from 'next/app';
-import { HeaderPage } from '../components/header';
-import { Head } from '~/components/head';
-import { Footer } from '~/components/footer';
+import { HeaderPage } from '~/components/Header';
+import { Head } from '~/components/Head';
+import { Footer } from '~/components/Footer';
 
 export const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (

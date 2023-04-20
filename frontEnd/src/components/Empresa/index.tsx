@@ -1,4 +1,4 @@
-const empresa = () => {
+const SobreEmpresa = () => {
   return (
     <>
       <main className="flex justify-center h-screen">
@@ -9,4 +9,4 @@ const empresa = () => {
     </>
   );
 };
-export default empresa;
+export default SobreEmpresa;

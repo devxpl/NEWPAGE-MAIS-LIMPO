@@ -1,4 +1,4 @@
-const MainPage = () => {
+const HomePage = () => {
   // Array de mini vídeos
   const miniVideos = [
     {
@@ -6,7 +6,6 @@ const MainPage = () => {
       video: '/assets/DIVULGA.mp4',
     },
   ];
-  // Componente principal
   return (
     <>
       {/* Seção principal */}
@@ -61,5 +60,4 @@ const MainPage = () => {
     </>
   );
 };
-
-export default MainPage;
+export default HomePage;

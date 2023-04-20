@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-const Produtos = () => {
+const ListProduct = () => {
   const products = [
     {
       id: 1,
@@ -66,7 +66,6 @@ const Produtos = () => {
       image: '/assets/luva.png',
     },
   ];
-
   return (
     <div className="grid desktop:grid-cols-4 xsm:grid-cols-1 laptop:grid-cols-2 gap-4 pt-20">
       {products.map((product) => (
@@ -98,5 +97,4 @@ const Produtos = () => {
     </div>
   );
 };
-
-export default Produtos;
+export default ListProduct;
